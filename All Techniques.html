@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Text Convertor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cipher Text Convertor</h1>
+        <form id="cipherForm">
+            <label for="text">Enter Plain Text:</label>
+            <input type="text" id="text" name="text" placeholder="Enter your text" required>
+
+            <label for="cipher">Choose a Cipher Technique:</label>
+            <select id="cipher" name="cipher" required>
+                <option value="caesar">Caesar Cipher</option>
+                <option value="vigenere">Vigenère Cipher</option>
+                <option value="transposition">Transposition Cipher</option>
+                <option value="railFence">Rail Fence Cipher</option>
+            </select>
+
+            <label for="operation">Operation:</label>
+            <select id="operation" name="operation" required>
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+
+            <label for="key">Enter Key (if applicable):</label>
+            <input type="text" id="key" name="key" placeholder="Enter key (number or text)">
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result">
+            <h2>Result:</h2>
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
